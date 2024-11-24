@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Trainer</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Register Trainer</h1>
+<form action="/add-trainer" method="POST">
+    <label for="nome">Nome do Treinador:</label>
+    <input type="text" id="nome" name="nome" required><br>
+    <label for="pokemons">Escolha seu Pokémon:</label><br>
+    <% pokemons.forEach(pokemon => { %>
+        <input type="checkbox" name="pokemons" value="<%= pokemon.id %>"> <%= pokemon.nome %><br>
+    <% }); %>
+    <button type="submit">Registrar</button>
+</form>
+<a href="/">Voltar</a>
+</body>
+</html>

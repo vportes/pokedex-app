@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Pokédex</h1>
+<a href="/add-pokemon">Adicionar Pokémon</a>
+<a href="/add-trainer">Registrar Treinador</a>
+<h2>Pokémon List</h2>
+<ul>
+    <% pokemons.forEach(function(pokemon) { %>
+        <li><%= pokemon.nome %> - <%= pokemon.tipo %></li>
+    <% }); %>
+</ul>
+</body>
+</html>

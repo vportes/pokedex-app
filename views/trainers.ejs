@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trainers</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Treinadores</h1>
+<a href="/">Home</a>
+<a href="/add-trainer">Registrar Treinador</a>
+<h2>Lista de Treinadores</h2>
+<ul>
+    <% trainers.forEach(function(trainer) { %>
+        <li>
+            <strong><%= trainer.nome %></strong>
+            <ul>
+                <li>Pokémon:</li>
+                <% trainer.pokedex.forEach(function(pokemon) { %>
+                <li><%= pokemon.nome || pokemon.name %></li>
+                <% }); %>
+            </ul>
+        </li>
+    <% }); %>
+</ul>
+</body>
+</html>
